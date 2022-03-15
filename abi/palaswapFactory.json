@@ -1,0 +1,152 @@
+[
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_factory", "type": "address" },
+      { "internalType": "address", "name": "_farm", "type": "address" },
+      { "internalType": "address", "name": "_wKALY", "type": "address" }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "factory",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [],
+    "name": "farm",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [],
+    "name": "wKLAY",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "account", "type": "address" }],
+    "name": "balancePoolOf",
+    "outputs": [
+      {
+        "components": [
+          { "internalType": "address", "name": "pool", "type": "address" },
+          { "internalType": "address", "name": "token0", "type": "address" },
+          { "internalType": "address", "name": "token1", "type": "address" },
+          { "internalType": "uint256", "name": "lpBalance", "type": "uint256" },
+          { "internalType": "uint256", "name": "token0Balance", "type": "uint256" },
+          { "internalType": "uint256", "name": "token1Balance", "type": "uint256" }
+        ],
+        "internalType": "struct Viewer.UserBalance[]",
+        "name": "userPoolList",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [{ "internalType": "address", "name": "account", "type": "address" }],
+    "name": "balanceFarmOf",
+    "outputs": [
+      {
+        "components": [
+          { "internalType": "address", "name": "pool", "type": "address" },
+          { "internalType": "uint256", "name": "lpBalance", "type": "uint256" },
+          { "internalType": "uint256", "name": "rewardDebt", "type": "uint256" },
+          { "internalType": "uint256", "name": "lockUpEndBlock", "type": "uint256" },
+          { "internalType": "uint256", "name": "pendingReward", "type": "uint256" },
+          { "internalType": "uint256", "name": "poolTotalLP", "type": "uint256" }
+        ],
+        "internalType": "struct Viewer.UserFarm[]",
+        "name": "userFarmList",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [],
+    "name": "farmInfos",
+    "outputs": [
+      {
+        "components": [
+          { "internalType": "address", "name": "pool", "type": "address" },
+          { "internalType": "uint256", "name": "totalLP", "type": "uint256" },
+          { "internalType": "uint256", "name": "allocPoint", "type": "uint256" },
+          { "internalType": "uint256", "name": "lastRewardBlock", "type": "uint256" },
+          { "internalType": "uint256", "name": "accRewardPerShare", "type": "uint256" }
+        ],
+        "internalType": "struct Viewer.FarmInfo[]",
+        "name": "farmInfoList",
+        "type": "tuple[]"
+      },
+      { "internalType": "uint256", "name": "totalAllocPoint", "type": "uint256" },
+      { "internalType": "uint256", "name": "startBlock", "type": "uint256" },
+      { "internalType": "uint256", "name": "rewardPerBlock", "type": "uint256" },
+      { "internalType": "uint256", "name": "BONUS_MULTIPLIER", "type": "uint256" }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [],
+    "name": "poolInfos",
+    "outputs": [
+      {
+        "components": [
+          { "internalType": "address", "name": "pool", "type": "address" },
+          { "internalType": "address", "name": "token0", "type": "address" },
+          { "internalType": "address", "name": "token1", "type": "address" },
+          { "internalType": "string", "name": "name", "type": "string" },
+          { "internalType": "string", "name": "symbol", "type": "string" },
+          { "internalType": "uint8", "name": "decimals", "type": "uint8" },
+          { "internalType": "uint256", "name": "totalSupply", "type": "uint256" },
+          { "internalType": "uint112", "name": "token0Reserve", "type": "uint112" },
+          { "internalType": "uint112", "name": "token1Reserve", "type": "uint112" },
+          { "internalType": "uint256", "name": "token0Balance", "type": "uint256" },
+          { "internalType": "uint256", "name": "token1Balance", "type": "uint256" }
+        ],
+        "internalType": "struct Viewer.PoolInfo[]",
+        "name": "poolInfoList",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  },
+  {
+    "inputs": [],
+    "name": "tokenInfos",
+    "outputs": [
+      {
+        "components": [
+          { "internalType": "address", "name": "token", "type": "address" },
+          { "internalType": "string", "name": "name", "type": "string" },
+          { "internalType": "string", "name": "symbol", "type": "string" },
+          { "internalType": "uint8", "name": "decimals", "type": "uint8" },
+          { "internalType": "uint256", "name": "totalSupply", "type": "uint256" }
+        ],
+        "internalType": "struct Viewer.TokenInfo[]",
+        "name": "tokenInfoList",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function",
+    "constant": true
+  }
+]

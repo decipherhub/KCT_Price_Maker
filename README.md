@@ -1,5 +1,9 @@
 # Klaytn Token Price Calculator
 
+먼저 KCT token price 프로그램에 대한 POC를 다음 링크에 추가하였습니다. 
+https://medium.com/@jomingue2107/kct-price-poc-a51975fb86da
+미흡한 부분들이 있기에 이런 점들은 개인 미디엄의 poc 형태로 부족한 점들에 대한 논의를 추가적으로 실었습니다.
+
 ## 국문 설명서
 
 아래의 내용은 디사이퍼 오픈소스 배포물 '클레이튼 덱스 유동성을 통한 토큰 가격(usd/krw) 조회 코드'에 대한 설명입니다. 현재 오픈소스 작성 시점에 Klaytn 네트워크 상의 탈중앙화 거래소 Dex는 Klayswap, Definix, Ufoswap, Pala, Claimswap, Roundrobin, Neuronswap 이 존재하며 해당 덱스들에 대해서는 가격 조회가 정상적으로 가능합니다. 만일 추가적인 덱스가 생긴다면 현재 작성된 코드의 컨벤션을 따라서 추가한다면 확장할 수 있습니다.
